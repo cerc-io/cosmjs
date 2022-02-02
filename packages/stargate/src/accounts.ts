@@ -11,6 +11,7 @@ import {
 } from "cosmjs-types/cosmos/vesting/v1beta1/vesting";
 import { Any } from "cosmjs-types/google/protobuf/any";
 import Long from "long";
+import {EthAccount} from "@cosmjs/ethaccount";
 
 export interface Account {
   /** Bech32 account address */
@@ -74,6 +75,14 @@ export function accountFromAny(input: Any): Account {
     }
     case "/cosmos.vesting.v1beta1.PeriodicVestingAccount": {
       const baseAccount = PeriodicVestingAccount.decode(value)?.baseVestingAccount?.baseAccount;
+      assert(baseAccount);
+      return accountFromBaseAccount(baseAccount);
+    }
+
+    // EthAccount
+
+    case "/ethermint.types.v1.EthAccount": {
+      const baseAccount = EthAccount.decode(value)?.baseAccount;
       assert(baseAccount);
       return accountFromBaseAccount(baseAccount);
     }

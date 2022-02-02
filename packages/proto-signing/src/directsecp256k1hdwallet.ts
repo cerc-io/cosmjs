@@ -113,7 +113,7 @@ export function extractKdfConfiguration(serialization: string): KdfConfiguration
 export interface DirectSecp256k1HdWalletOptions {
   /** The password to use when deriving a BIP39 seed from a mnemonic. */
   readonly bip39Password: string;
-  /** The BIP-32/SLIP-10 derivation paths. Defaults to the Cosmos Hub/ATOM path `m/44'/118'/0'/0/0`. */
+  /** The BIP-32/SLIP-10 derivation paths. Defaults to the Cosmos Hub/ATOM path `m/44'/118'/0'/0/0`. Default Ethermint path: `m/44'/60'/0'/0/0` */
   readonly hdPaths: readonly HdPath[];
   /** The bech32 address prefix (human readable part). Defaults to "cosmos". */
   readonly prefix: string;
@@ -334,7 +334,7 @@ export class DirectSecp256k1HdWallet implements OfflineDirectSigner {
   }
 
   private async getKeyPair(hdPath: HdPath): Promise<Secp256k1Keypair> {
-    const { privkey } = Slip10.derivePath(Slip10Curve.Secp256k1, this.seed, hdPath);
+    const { privkey } = Slip10.derivePathForEthSecp256k1(Slip10Curve.Secp256k1, this.seed, hdPath);
     const { pubkey } = await Secp256k1.makeKeypair(privkey);
     return {
       privkey: privkey,

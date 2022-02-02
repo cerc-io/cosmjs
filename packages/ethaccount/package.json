@@ -1,0 +1,26 @@
+{
+  "name": "@cosmjs/ethaccount",
+  "version": "1.0.0",
+  "description": "Exposes EthAccount interface to send txs to Ethermint chain",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "dependencies": {
+    "@cosmjs/proto-signing": "workspace:packages/proto-signing",
+    "@cosmjs/tendermint-rpc": "workspace:packages/tendermint-rpc",
+    "google-protobuf": "^3.19.1",
+    "long": "^5.2.0",
+    "protobufjs": "~6.10.2"
+  },
+  "devDependencies": {
+    "ts-proto": "^1.87.1"
+  }
+}

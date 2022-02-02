@@ -41,6 +41,7 @@
     "@confio/ics23": "^0.6.3",
     "@cosmjs/amino": "workspace:packages/amino",
     "@cosmjs/encoding": "workspace:packages/encoding",
+    "@cosmjs/ethaccount": "workspace:packages/ethaccount",
     "@cosmjs/math": "workspace:packages/math",
     "@cosmjs/proto-signing": "workspace:packages/proto-signing",
     "@cosmjs/stream": "workspace:packages/stream",

@@ -43,6 +43,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:packages/encoding"
       },
       {
+        "name": "@cosmjs/ethaccount",
+        "reference": "workspace:packages/ethaccount"
+      },
+      {
         "name": "@cosmjs/faucet",
         "reference": "workspace:packages/faucet"
       },
@@ -99,6 +103,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@cosmjs/cosmwasm-stargate", ["workspace:packages/cosmwasm-stargate"]],
       ["@cosmjs/crypto", ["workspace:packages/crypto"]],
       ["@cosmjs/encoding", ["workspace:packages/encoding"]],
+      ["@cosmjs/ethaccount", ["workspace:packages/ethaccount"]],
       ["@cosmjs/faucet", ["workspace:packages/faucet"]],
       ["@cosmjs/faucet-client", ["workspace:packages/faucet-client"]],
       ["@cosmjs/json-rpc", ["workspace:packages/json-rpc"]],
@@ -241,6 +246,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [
         "@cosmjs/encoding",
         "workspace:packages/encoding"
+      ],
+      [
+        "@cosmjs/ethaccount",
+        "workspace:packages/ethaccount"
       ],
       [
         "@cosmjs/faucet",
@@ -571,8 +580,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:1.3.0"
       ],
       [
+        "@types/object-hash",
+        "npm:1.3.4"
+      ],
+      [
         "@types/pako",
         "npm:1.0.1"
+      ],
+      [
+        "@types/prettier",
+        "npm:1.19.1"
       ],
       [
         "@types/qs",
@@ -1067,6 +1084,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:1.0.1"
       ],
       [
+        "dataloader",
+        "npm:1.4.0"
+      ],
+      [
         "date-format",
         "npm:3.0.0"
       ],
@@ -1473,6 +1494,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [
         "globby",
         "npm:11.0.4"
+      ],
+      [
+        "google-protobuf",
+        "npm:3.19.1"
       ],
       [
         "graceful-fs",
@@ -2107,6 +2132,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:4.1.1"
       ],
       [
+        "object-hash",
+        "npm:1.3.1"
+      ],
+      [
         "object-inspect",
         "npm:1.10.3"
       ],
@@ -2651,6 +2680,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "virtual:4f1584ad4aba8733a24be7c8aebbffafef25607f2d00f4b314cf96717145c692763628a31c2b85d4686fbb091ff21ebffa3cc337399c042c19a32b9bdb786464#npm:8.10.2"
       ],
       [
+        "ts-poet",
+        "npm:4.6.1"
+      ],
+      [
+        "ts-proto",
+        "npm:1.92.1"
+      ],
+      [
+        "ts-proto-descriptors",
+        "npm:1.3.1"
+      ],
+      [
         "tsconfig-paths",
         "npm:3.9.0"
       ],
@@ -2869,6 +2910,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@cosmjs/stargate", "workspace:packages/stargate"],
             ["eslint", "npm:7.26.0"],
             ["prettier", "npm:2.4.1"],
+            ["ts-proto", "npm:1.92.1"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"]
           ],
           "linkType": "SOFT",
@@ -3470,6 +3512,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }]
       ]],
+      ["@cosmjs/ethaccount", [
+        ["workspace:packages/ethaccount", {
+          "packageLocation": "./packages/ethaccount/",
+          "packageDependencies": [
+            ["@cosmjs/ethaccount", "workspace:packages/ethaccount"],
+            ["@cosmjs/proto-signing", "workspace:packages/proto-signing"],
+            ["@cosmjs/tendermint-rpc", "workspace:packages/tendermint-rpc"],
+            ["google-protobuf", "npm:3.19.1"],
+            ["long", "npm:5.2.0"],
+            ["protobufjs", "npm:6.10.2"],
+            ["ts-proto", "npm:1.92.1"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
       ["@cosmjs/faucet", [
         ["workspace:packages/faucet", {
           "packageLocation": "./packages/faucet/",
@@ -3855,6 +3912,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@cosmjs/amino", "workspace:packages/amino"],
             ["@cosmjs/crypto", "workspace:packages/crypto"],
             ["@cosmjs/encoding", "workspace:packages/encoding"],
+            ["@cosmjs/ethaccount", "workspace:packages/ethaccount"],
             ["@cosmjs/math", "workspace:packages/math"],
             ["@cosmjs/proto-signing", "workspace:packages/proto-signing"],
             ["@cosmjs/stream", "workspace:packages/stream"],
@@ -4820,11 +4878,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/object-hash", [
+        ["npm:1.3.4", {
+          "packageLocation": "./.yarn/cache/@types-object-hash-npm-1.3.4-3b3e2e44e8-fe4aa04142.zip/node_modules/@types/object-hash/",
+          "packageDependencies": [
+            ["@types/object-hash", "npm:1.3.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/pako", [
         ["npm:1.0.1", {
           "packageLocation": "./.yarn/cache/@types-pako-npm-1.0.1-9e979aac42-998b8be64d.zip/node_modules/@types/pako/",
           "packageDependencies": [
             ["@types/pako", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/prettier", [
+        ["npm:1.19.1", {
+          "packageLocation": "./.yarn/cache/@types-prettier-npm-1.19.1-396f22bcd2-d34229c37d.zip/node_modules/@types/prettier/",
+          "packageDependencies": [
+            ["@types/prettier", "npm:1.19.1"]
           ],
           "linkType": "HARD",
         }]
@@ -7027,6 +7103,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@cosmjs/stargate", "workspace:packages/stargate"],
             ["eslint", "npm:7.26.0"],
             ["prettier", "npm:2.4.1"],
+            ["ts-proto", "npm:1.92.1"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"]
           ],
           "linkType": "SOFT",
@@ -7089,6 +7166,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/custom-event-npm-1.0.1-6693c8e298-334f48a6d5.zip/node_modules/custom-event/",
           "packageDependencies": [
             ["custom-event", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["dataloader", [
+        ["npm:1.4.0", {
+          "packageLocation": "./.yarn/cache/dataloader-npm-1.4.0-ba03bd2183-e2c93d43af.zip/node_modules/dataloader/",
+          "packageDependencies": [
+            ["dataloader", "npm:1.4.0"]
           ],
           "linkType": "HARD",
         }]
@@ -8441,6 +8527,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["google-protobuf", [
+        ["npm:3.19.1", {
+          "packageLocation": "./.yarn/cache/google-protobuf-npm-3.19.1-f2bb0b2cd2-9ec57e1bdf.zip/node_modules/google-protobuf/",
+          "packageDependencies": [
+            ["google-protobuf", "npm:3.19.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["graceful-fs", [
         ["npm:4.2.6", {
           "packageLocation": "./.yarn/cache/graceful-fs-npm-4.2.6-535b2234f1-792e64aafd.zip/node_modules/graceful-fs/",
@@ -9712,6 +9807,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["long", "npm:4.0.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:5.2.0", {
+          "packageLocation": "./.yarn/cache/long-npm-5.2.0-bbbd23a9e6-37aa4e67b9.zip/node_modules/long/",
+          "packageDependencies": [
+            ["long", "npm:5.2.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["lru-cache", [
@@ -10282,6 +10384,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["object-hash", [
+        ["npm:1.3.1", {
+          "packageLocation": "./.yarn/cache/object-hash-npm-1.3.1-ea495b8e52-fdcb957a2f.zip/node_modules/object-hash/",
+          "packageDependencies": [
+            ["object-hash", "npm:1.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["object-inspect", [
         ["npm:1.10.3", {
           "packageLocation": "./.yarn/cache/object-inspect-npm-1.10.3-5aa499f036-9a56db2e01.zip/node_modules/object-inspect/",
@@ -10709,6 +10820,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/prettier-npm-2.4.1-623aac91ee-cc6830588b.zip/node_modules/prettier/",
           "packageDependencies": [
             ["prettier", "npm:2.4.1"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:2.5.1", {
+          "packageLocation": "./.yarn/cache/prettier-npm-2.5.1-58b195b509-21b9408476.zip/node_modules/prettier/",
+          "packageDependencies": [
+            ["prettier", "npm:2.5.1"]
           ],
           "linkType": "HARD",
         }]
@@ -12268,6 +12386,44 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [
             "@types/typescript",
             "typescript"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["ts-poet", [
+        ["npm:4.6.1", {
+          "packageLocation": "./.yarn/unplugged/ts-poet-npm-4.6.1-407a0903b9/node_modules/ts-poet/",
+          "packageDependencies": [
+            ["ts-poet", "npm:4.6.1"],
+            ["@types/prettier", "npm:1.19.1"],
+            ["lodash", "npm:4.17.21"],
+            ["prettier", "npm:2.5.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["ts-proto", [
+        ["npm:1.92.1", {
+          "packageLocation": "./.yarn/cache/ts-proto-npm-1.92.1-42079efd81-3f5f66fdbb.zip/node_modules/ts-proto/",
+          "packageDependencies": [
+            ["ts-proto", "npm:1.92.1"],
+            ["@types/object-hash", "npm:1.3.4"],
+            ["dataloader", "npm:1.4.0"],
+            ["object-hash", "npm:1.3.1"],
+            ["protobufjs", "npm:6.10.2"],
+            ["ts-poet", "npm:4.6.1"],
+            ["ts-proto-descriptors", "npm:1.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["ts-proto-descriptors", [
+        ["npm:1.3.1", {
+          "packageLocation": "./.yarn/cache/ts-proto-descriptors-npm-1.3.1-9f5c70fd7f-ef8acf9231.zip/node_modules/ts-proto-descriptors/",
+          "packageDependencies": [
+            ["ts-proto-descriptors", "npm:1.3.1"],
+            ["long", "npm:4.0.0"],
+            ["protobufjs", "npm:6.10.2"]
           ],
           "linkType": "HARD",
         }]

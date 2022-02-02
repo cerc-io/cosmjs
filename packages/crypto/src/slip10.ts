@@ -90,6 +90,19 @@ export class Slip10 {
     return result;
   }
 
+  public static derivePathForEthSecp256k1(curve: Slip10Curve, seed: Uint8Array, path: HdPath): Slip10Result {
+    let result = this.derivePath(curve, seed, path);
+
+    let len = result.privkey.length;
+    for(let i = 0; i < len; i++) {
+      let temp = result.privkey[i];
+      result.privkey[i] = result.privkey[len-1-i];
+      result.privkey[len-1-i] = temp;
+    }
+    
+    return result;
+  }
+
   private static master(curve: Slip10Curve, seed: Uint8Array): Slip10Result {
     const i = new Hmac(Sha512, toAscii(curve)).update(seed).digest();
     const il = i.slice(0, 32);

@@ -550,6 +550,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@cosmjs/ethaccount@workspace:packages/ethaccount":
+  version: 0.0.0-use.local
+  resolution: "@cosmjs/ethaccount@workspace:packages/ethaccount"
+  dependencies:
+    "@cosmjs/proto-signing": "workspace:packages/proto-signing"
+    "@cosmjs/tendermint-rpc": "workspace:packages/tendermint-rpc"
+    google-protobuf: ^3.19.1
+    long: ^5.2.0
+    protobufjs: ~6.10.2
+    ts-proto: ^1.87.1
+  languageName: unknown
+  linkType: soft
+
 "@cosmjs/faucet-client@workspace:packages/faucet-client":
   version: 0.0.0-use.local
   resolution: "@cosmjs/faucet-client@workspace:packages/faucet-client"
@@ -920,6 +933,7 @@ __metadata:
     "@cosmjs/amino": "workspace:packages/amino"
     "@cosmjs/crypto": "workspace:packages/crypto"
     "@cosmjs/encoding": "workspace:packages/encoding"
+    "@cosmjs/ethaccount": "workspace:packages/ethaccount"
     "@cosmjs/math": "workspace:packages/math"
     "@cosmjs/proto-signing": "workspace:packages/proto-signing"
     "@cosmjs/stream": "workspace:packages/stream"
@@ -1758,10 +1772,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/object-hash@npm:^1.3.0":
+  version: 1.3.4
+  resolution: "@types/object-hash@npm:1.3.4"
+  checksum: fe4aa041427f3c69cbcf63434af6e788329b40d7208b30aa845cfc1aa6bf9b0c11b23fa33a567d85ba7f2574a95c3b4a227f4b9b9b55da1eaea68ab94b4058d9
+  languageName: node
+  linkType: hard
+
 "@types/pako@npm:^1.0.1":
   version: 1.0.1
   resolution: "@types/pako@npm:1.0.1"
   checksum: 998b8be64d79fc656637adf25526137f582d72eceacb10b5de88c5adcaa3a1da27b061dedf0c9e953002fbe2cac30123dad87344ab6b2ae99463b2846459c67d
+  languageName: node
+  linkType: hard
+
+"@types/prettier@npm:^1.19.0":
+  version: 1.19.1
+  resolution: "@types/prettier@npm:1.19.1"
+  checksum: d34229c37d3419b01efa31968b68c33b8b9b717bdf961e48f68e89821864b1329c45323d28e1200a204e7b2eefca1dabdac4aa0c3d698dbc8c60247322103b11
   languageName: node
   linkType: hard
 
@@ -3005,6 +3033,7 @@ __metadata:
     "@cosmjs/stargate": "workspace:packages/stargate"
     eslint: ^7.5
     prettier: ^2.4.1
+    ts-proto: ^1.92.1
     typescript: ~4.4
   languageName: unknown
   linkType: soft
@@ -3061,6 +3090,13 @@ __metadata:
   version: 1.0.1
   resolution: "custom-event@npm:1.0.1"
   checksum: 334f48a6d5fb98df95c5f72cab2729417ffdcc74aebb1d51aa9220391bdee028ec36d9e19976a5a64f536e1e4aceb5bb4f0232d4761acc3e8fd74c54573959bd
+  languageName: node
+  linkType: hard
+
+"dataloader@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "dataloader@npm:1.4.0"
+  checksum: e2c93d43afde68980efc0cd9ff48e9851116e27a9687f863e02b56d46f7e7868cc762cd6dcbaf4197e1ca850a03651510c165c2ae24b8e9843fd894002ad0e20
   languageName: node
   linkType: hard
 
@@ -4166,6 +4202,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"google-protobuf@npm:^3.19.1":
+  version: 3.19.1
+  resolution: "google-protobuf@npm:3.19.1"
+  checksum: 9ec57e1bdff76f9aec0f855376c1e0aa07de5c1b856b490d5c72b9e69a9e6e6ad24879a14e148a1542dbf27444575ad88b0a96c779f0d11b94211d78e1e5c924
+  languageName: node
+  linkType: hard
+
 "graceful-fs@npm:^4.1.15, graceful-fs@npm:^4.1.2, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.4, graceful-fs@npm:^4.2.6":
   version: 4.2.6
   resolution: "graceful-fs@npm:4.2.6"
@@ -5230,7 +5273,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.19, lodash@npm:^4.17.21":
+"lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -5254,6 +5297,13 @@ fsevents@~2.3.1:
   version: 4.0.0
   resolution: "long@npm:4.0.0"
   checksum: 16afbe8f749c7c849db1f4de4e2e6a31ac6e617cead3bdc4f9605cb703cd20e1e9fc1a7baba674ffcca57d660a6e5b53a9e236d7b25a295d3855cca79cc06744
+  languageName: node
+  linkType: hard
+
+"long@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "long@npm:5.2.0"
+  checksum: 37aa4e67b9c3eebc6d9d675adcc9d06f06059ca268922a71273de389746bf07f0ff282f9e604d17fdf84c4149099b44e936ea2b621a6c4759a216621afa97efd
   languageName: node
   linkType: hard
 
@@ -5771,6 +5821,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"object-hash@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "object-hash@npm:1.3.1"
+  checksum: fdcb957a2f15a9060e30655a9f683ba1fc25dfb8809a73d32e9634bec385a2f1d686c707ac1e5f69fb773bc12df03fb64c77ce3faeed83e35f4eb1946cb1989e
+  languageName: node
+  linkType: hard
+
 "object-inspect@npm:^1.9.0":
   version: 1.10.3
   resolution: "object-inspect@npm:1.10.3"
@@ -6164,6 +6221,15 @@ fsevents@~2.3.1:
   dependencies:
     fast-diff: ^1.1.2
   checksum: 00ce8011cf6430158d27f9c92cfea0a7699405633f7f1d4a45f07e21bf78e99895911cbcdc3853db3a824201a7c745bd49bfea8abd5fb9883e765a90f74f8392
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.0.2":
+  version: 2.5.1
+  resolution: "prettier@npm:2.5.1"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 21b9408476ea1c544b0e45d51ceb94a84789ff92095abb710942d780c862d0daebdb29972d47f6b4d0f7ebbfb0ffbf56cc2cfa3e3e9d1cca54864af185b15b66
   languageName: node
   linkType: hard
 
@@ -7320,6 +7386,43 @@ fsevents@~2.3.1:
     ts-node-transpile-only: dist/bin-transpile.js
     ts-script: dist/bin-script-deprecated.js
   checksum: 480adb076fdab6dbabd726c6056d651ddc567feda0d3e4770d809c01d000715a0f61f80be0e4a92ef87b7f4a494b79d9595d62de4a3931d740122ae26f0e10d8
+  languageName: node
+  linkType: hard
+
+"ts-poet@npm:^4.5.0":
+  version: 4.6.1
+  resolution: "ts-poet@npm:4.6.1"
+  dependencies:
+    "@types/prettier": ^1.19.0
+    lodash: ^4.17.15
+    prettier: ^2.0.2
+  checksum: 1bb4aa4f8f21ebc68a4b0416d152431b2b0f905e7cc361edb20e5b2583aaa75de539bdbca15f4990e012a3606e54119b8f28ba5371efbfba7adbc64854beeb57
+  languageName: node
+  linkType: hard
+
+"ts-proto-descriptors@npm:^1.2.1":
+  version: 1.3.1
+  resolution: "ts-proto-descriptors@npm:1.3.1"
+  dependencies:
+    long: ^4.0.0
+    protobufjs: ^6.8.8
+  checksum: ef8acf9231375dd00cfa667c688746ae24fb8012a3875d1447cb6a6e9e0311150681719072716f58a24b1df801bcc35e56faca11ea4bac1f8146038b524b93c4
+  languageName: node
+  linkType: hard
+
+"ts-proto@npm:^1.87.1, ts-proto@npm:^1.92.1":
+  version: 1.92.1
+  resolution: "ts-proto@npm:1.92.1"
+  dependencies:
+    "@types/object-hash": ^1.3.0
+    dataloader: ^1.4.0
+    object-hash: ^1.3.1
+    protobufjs: ^6.8.8
+    ts-poet: ^4.5.0
+    ts-proto-descriptors: ^1.2.1
+  bin:
+    protoc-gen-ts_proto: protoc-gen-ts_proto
+  checksum: 3f5f66fdbba45a3e7549da62609dbc8ae8c5fc34f11c7230e59c8185e83d2bb2a1f714845b9a04e2def246e909104993deb1295db0ef42fb536bf4c4a08271d7
   languageName: node
   linkType: hard
 
